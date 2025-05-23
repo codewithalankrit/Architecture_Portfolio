@@ -1,0 +1,383 @@
+.bgimage {
+  background-image: url(images/background.png);
+}
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+}
+@keyframes slow-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.slow-spin {
+  animation: slow-spin 20s linear infinite;
+}
+.inter {
+  font-family: "inter", sans-serif;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.heading-container {
+  transition: transform 0.6s ease;
+}
+
+.list-container {
+  list-style: disc;
+  transition: opacity 0.6s ease;
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  transform: translate(-50%);
+  padding: 1rem;
+}
+
+.card:hover .heading-container {
+  transform: translateY(-30%); /* Move the heading up */
+}
+
+.card:hover .list-container {
+  opacity: 1; /* Show the list */
+}
+
+/* Counter section styling */
+.counter-section {
+  transition: all 0.5s ease;
+}
+
+.counter-section h3 {
+  transition: color 0.3s ease;
+}
+
+/* Add responsive padding for smaller screens */
+@media (max-width: 640px) {
+  .counter-section {
+    padding: 0 10px;
+  }
+
+  .counter-section > div {
+    margin-bottom: 30px;
+  }
+}
+/* Text stroke utilities */
+.stroke-black {
+  -webkit-text-stroke: 1.25px black;
+}
+
+.stroke-white {
+  -webkit-text-stroke: 1.25px white;
+}
+
+/* You can create different stroke widths */
+.stroke-thin {
+  -webkit-text-stroke: 0.5px;
+}
+
+.stroke-medium {
+  -webkit-text-stroke: 1.25px;
+}
+
+.stroke-thick {
+  -webkit-text-stroke: 2px;
+}
+
+/* Counter section styling */
+.counter-section {
+  transition: all 0.5s ease;
+}
+
+.counter-section h3 {
+  transition: color 0.3s ease;
+}
+
+.counter-section:hover h3 {
+  text-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0, 255, 255, 0.5);
+}
+
+/* Projects Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Project overlay styling */
+.project-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.project-container:hover .project-overlay {
+  opacity: 1;
+  cursor: context-menu;
+}
+
+.project-container:hover img {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.project-overlay button {
+  transition: all 0.3s ease;
+  background-color: #ada6a6 !important;
+  color: white !important;
+  font-weight: light !important;
+  border-radius: 1.5rem !important;
+  border: none !important;
+  opacity: 70%;
+}
+
+/* Create a specific class for project buttons */
+.project-button {
+  background-color: #ada6a6 !important;
+  color: white !important;
+  padding: 0.5rem 1.5rem !important;
+  font-weight: bold !important;
+  border-radius: 1.5rem !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+.project-item {
+  transition: transform 0.5s ease, z-index 0.1s;
+  z-index: 1;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.02);
+}
+
+/* New vertical layout - remove old positioning */
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
+.item6,
+.item7,
+.item8,
+.item9,
+.item10,
+.item11,
+.item12 {
+  grid-area: auto;
+}
+
+/* Some items can be taller */
+.item1,
+.item5,
+.item9 {
+  grid-row: span 2;
+}
+
+/* Some items can be wider */
+.item3,
+.item7,
+.item11 {
+  grid-column: span 2;
+}
+
+/* Expand button on grid items */
+.expand-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.3s ease;
+}
+
+.expand-btn:hover {
+  background-color: white;
+}
+
+/* Center explore box */
+.explore-container {
+  grid-column: 2;
+  grid-row: 3 / span 2;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-box {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.view-more-btn {
+  display: inline-block;
+  background-color: #00cccc;
+  color: black;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .counter-section {
+    padding: 0 10px;
+  }
+
+  .counter-section > div {
+    margin-bottom: 30px;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 400px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .relative.group {
+    margin-bottom: 10px;
+  }
+}
+
+/* Reviews carousel styling */
+.reviews-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review-slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+/* Arrow button styles */
+#prev-review,
+#next-review {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+#prev-review svg,
+#next-review svg {
+  width: 24px;
+  height: 24px;
+}
+
+#prev-review:hover,
+#next-review:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dot {
+  transition: background-color 0.3s ease;
+}
+
+.dot-active {
+  background-color: #00ffff !important;
+  transform: scale(1.2);
+}
+
+/* Optional: Add a subtle fade effect for reviews */
+@keyframes fadeIn {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.reviews-container .review-slide {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Values section hover effects */
+.values-heading {
+  transition: transform 0.3s ease;
+}
+
+.values-heading:hover {
+  transform: scale(1.1);
+}
+
+/* Style for filled input boxes in footer */
+.filled-input {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Disable resizing of textarea in footer */
+footer textarea {
+  resize: none;
+}

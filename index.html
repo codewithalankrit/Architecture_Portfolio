@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raid Studios</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="offlineMessage"
+      class="hidden fixed top-0 left-0 w-full bg-red-600 text-white text-center py-2 z-50 font-bold"
+    >
+      No internet connection please again later
+    </div>
+    <div class="bgimage h-screen bg-cover bg-center">
+      <!-- Navbar -->
+      <nav class="bg-transparent">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <!-- Logo at the start -->
+            <div class="flex-shrink-0">
+              <img
+                class="h-9 w-auto"
+                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
+                alt="Your Company"
+              />
+            </div>
+
+            <!-- Mobile menu button positioned correctly -->
+            <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <button
+                type="button"
+                id="mobile-menu-button"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none"
+              >
+                <span class="sr-only">Open main menu</span>
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Main navigation links for larger screens -->
+            <div class="flex flex-1 items-center justify-center">
+              <div class="hidden sm:block">
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="rounded-md bg-gray-900 px-3 py-2 text-xl font-medium text-white"
+                    aria-current="page"
+                    >Home</a
+                  >
+                  <a
+                    href="#projects"
+                    class="rounded-md px-3 py-2 text-xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >Projects</a
+                  >
+                  <a
+                    href="#about"
+                    class="rounded-md px-3 py-2 text-xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >About us</a
+                  >
+                  <a
+                    href="#contact"
+                    class="rounded-md px-3 py-2 text-xl font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >Contact us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile menu, hidden by default -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+          <div class="space-y-1 px-2 pt-2 pb-3">
+            <a
+              href="#"
+              class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+              aria-current="page"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >About us</a
+            >
+            <a
+              href="#projects"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+              >Contact us</a
+            >
+          </div>
+        </div>
+      </nav>
+      <h1
+        class="montserrat text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl font-medium text-center bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent mt-64"
+      >
+        ARCHITECTURE <br />IS FOREVER
+      </h1>
+      <div class="flex flex-col md:flex-row items-center justify-between mt-40">
+        <div
+          class="flex-none relative w-48 h-48 slow-spin"
+          id="circleText"
+        ></div>
+        <div class="flex-1 text-right">
+          <h1
+            class="montserrat text-lg md:text-3xl font-medium text-white mr-5"
+          >
+            We Create Places <br />
+            That Deserves To <br />
+            Be Called Home.
+          </h1>
+        </div>
+      </div>
+      <!-- Card Section -->
+      <div
+        class="bg-black text-white pt-16 pb-48"
+        style="background-color: #1a1a1a"
+      >
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold inter" style="color: #00ffff">
+            WHAT WE DO
+          </h2>
+          <h1 class="py-10 text-7xl font-normal inter" style="color: #00ffff">
+            Our Expertise
+          </h1>
+        </div>
+        <div class="flex flex-wrap justify-center gap-20 px-4 mt-20">
+          <!-- Card 1 -->
+          <div
+            class="overflow-hidden w-96 shadow-lg card"
+            style="border-radius: 45px"
+          >
+            <div class="relative">
+              <img
+                src="images/image1.jpg"
+                alt="Master Planning"
+                class="w-full object-cover"
+                style="height: 31.75rem"
+              />
+              <div
+                class="absolute inset-0 bg-black/40 flex items-center justify-center transition-transform ease-in-out duration-300 heading-container"
+              >
+                <h3
+                  class="text-white text-4xl font-bold text-center"
+                  style="-webkit-text-stroke: 1.25px black"
+                >
+                  Master<br />Planning
+                </h3>
+              </div>
+              <ul
+                class="inter text-xl font-bold w-64 absolute inset-0 flex flex-col text-left justify-center opacity-0 transition-opacity ease-in-out duration-300 list-container"
+                style="color: rgb(255, 246, 246)"
+              >
+                <li>Institutional</li>
+                <li>Multi Storied Housing & Villas</li>
+                <li>Hospitality</li>
+                <li>Infrastructure</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="overflow-hidden w-96 shadow-lg card"
+            style="border-radius: 45px"
+          >
+            <div class="relative">
+              <img
+                src="images/image2.png"
+                alt="Architectural Design"
+                class="w-full object-cover"
+                style="height: 31.75rem"
+              />
+              <div
+                class="absolute inset-0 bg-black/40 flex items-center justify-center transition-transform ease-in-out duration-300 heading-container"
+              >
+                <h3
+                  class="text-white text-4xl font-bold text-center"
+                  style="-webkit-text-stroke: 1.25px black"
+                >
+                  Architectural <br />
+                  Design
+                </h3>
+              </div>
+              <ul
+                class="inter text-xl font-bold w-64 absolute inset-0 flex flex-col text-left justify-center opacity-0 transition-opacity ease-in-out duration-300 list-container"
+                style="color: rgb(255, 246, 246)"
+              >
+                <li>Sustainability</li>
+                <li>Innovation</li>
+                <li>Proportion</li>
+                <li>Hierarchy</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="overflow-hidden w-96 shadow-lg card"
+            style="border-radius: 45px"
+          >
+            <div class="relative">
+              <img
+                src="images/image3.png"
+                alt="Interior Design"
+                class="w-full object-cover"
+                style="height: 31.75rem"
+              />
+              <div
+                class="absolute inset-0 bg-black/40 flex items-center justify-center transition-transform ease-in-out duration-300 heading-container"
+              >
+                <h3
+                  class="text-white text-4xl font-bold text-center"
+                  style="-webkit-text-stroke: 1.25px black"
+                >
+                  Interior <br />
+                  Design
+                </h3>
+              </div>
+              <ul
+                class="inter text-xl font-bold w-64 absolute inset-0 flex flex-col text-left justify-center opacity-0 transition-opacity ease-in-out duration-300 list-container"
+                style="color: rgb(255, 246, 246)"
+              >
+                <li>Comfort</li>
+                <li>Texture</li>
+                <li>Ergonomics</li>
+                <li>Aesthetics</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="overflow-hidden w-96 shadow-lg card"
+            style="border-radius: 45px"
+          >
+            <div class="relative">
+              <img
+                src="images/image4.png"
+                alt="Design & Build"
+                class="w-full object-cover"
+                style="height: 31.75rem"
+              />
+              <div
+                class="absolute inset-0 bg-black/40 flex items-center justify-center transition-transform ease-in-out duration-300 heading-container"
+              >
+                <h3
+                  class="text-white text-4xl font-bold text-center"
+                  style="-webkit-text-stroke: 1.25px black"
+                >
+                  Design & <br />
+                  Build
+                </h3>
+              </div>
+              <ul
+                class="inter text-xl font-bold w-64 absolute inset-0 flex flex-col text-left justify-center opacity-0 transition-opacity ease-in-out duration-300 list-container"
+                style="color: rgb(255, 246, 246)"
+              >
+                <li>Mobility</li>
+                <li>Resilience</li>
+                <li>Connectivity</li>
+                <li>Flexibility</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-white pt-10 pb-16" style="background-color: #1a1a1a">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Portfolio Gallery Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- Left Column: Modern Minimalist Image -->
+            <div class="md:col-span-8 relative overflow-hidden">
+              <img
+                src="images/modernminimalist.png"
+                alt="Modern Minimalist Interior"
+                class="w-full h-full object-cover"
+                style="border-radius: 45px"
+              />
+              <div class="absolute bottom-6 left-6 flex flex-col items-start">
+                <button
+                  class="inter text-white font-regular px-9 py-3 text-lg"
+                  style="
+                    background-color: #1a1a1a;
+                    border: 2px solid #f4eeee;
+                    border-radius: 31.5px;
+                  "
+                >
+                  View More
+                </button>
+                <h2
+                  class="inter text-6xl font-normal text-white"
+                  style="-webkit-text-stroke: 1px black"
+                >
+                  Modern<br />Minimalist
+                </h2>
+              </div>
+            </div>
+
+            <!-- Right Column: Content Blocks -->
+            <div class="md:col-span-4 grid grid-rows-2 gap-6">
+              <!-- Top Block: Aesthetic -->
+              <div
+                class="pt-6 pl-6 flex flex-col justify-between"
+                style="border-radius: 47px; background-color: #d9d9d9"
+              >
+                <div>
+                  <button
+                    class="inter text-black border-2 border-black rounded-3xl px-6 py-2 mt-8 text-lg font-normal"
+                  >
+                    Aesthetic
+                  </button>
+                  <p class="montserrat text-black mt-8 font-semibold text-lg">
+                    Aesthetic furniture where every<br />piece tells a story of
+                    style
+                  </p>
+                  <h3 class="montserrat text-5xl font-semibold mt-4 text-black">
+                    Into a gallery<br />of elegance
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Bottom Block: Minimalist Image -->
+              <div class="relative overflow-hidden" style="border-radius: 47px">
+                <img
+                  src="images/interiorfurniture.jpg"
+                  alt="Minimalist Interior"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute mt-16 top-64 right-2 p-2 rounded-full"
+                  style="background-color: #e0d2d2"
+                >
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M7 17L17 7M17 7H7M17 7V17"
+                      stroke="black"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Architectural Statement - Full Width in Mobile, Side Column in Desktop -->
+            <div
+              class="md:col-span-4 rounded-lg pl-10 pt-6 pb-6"
+              style="border-radius: 47px; background-color: #d9d9d9"
+            >
+              <p class="inter text-black text-3xl font-medium leading-relaxed">
+                An architectural <br />
+                statement defined <br />
+                by clarity and <br />
+                precision, where <br />
+                every angle, edge, <br />
+                and surface <br />
+                is a testament to <br />
+                thoughtful design, <br />
+                culminating in a <br />
+                captivating <br />
+                composition that <br />
+                inspires awe and <br />
+                admiration.
+              </p>
+              <button
+                class="inter text-white font-regular px-9 py-3 text-lg mt-10 ml-12"
+                style="
+                  background-color: #1a1a1a;
+                  border: 2px solid black;
+                  border-radius: 41.5px;
+                "
+              >
+                Learn More...
+              </button>
+            </div>
+
+            <!-- Sleek Minimalist - Full Width in Mobile, Side Column in Desktop -->
+            <div
+              class="md:col-span-8 relative overflow-hidden"
+              style="border-radius: 49px"
+            >
+              <img
+                src="images/exterior_house.jpg"
+                alt="Sleek Minimalist Architecture"
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute bottom-6 left-6 flex flex-col items-start">
+                <button
+                  class="inter text-white font-regular px-9 py-3 text-lg"
+                  style="
+                    background-color: #1a1a1a;
+                    border: 2px solid #f4eeee;
+                    border-radius: 31.5px;
+                  "
+                >
+                  View More
+                </button>
+                <h2
+                  class="inter text-6xl font-normal text-white"
+                  style="-webkit-text-stroke: 1px black"
+                >
+                  Sleek<br />Minimalist
+                </h2>
+              </div>
+            </div>
+          </div>
+
+          <!-- Statistics Section -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-32 text-center counter-section"
+          >
+            <div>
+              <p
+                class="montserrat text-medium text-2xl sm:text-3xl md:text-4xl"
+                style="color: #f4eeee"
+              >
+                Projects Completed
+              </p>
+              <h3
+                id="projects-counter"
+                class="montserrat text-4xl sm:text-5xl md:text-6xl font-medium mt-2"
+                style="color: #00ffff"
+                data-target="265"
+              >
+                0
+              </h3>
+            </div>
+            <div>
+              <p
+                class="montserrat text-medium text-2xl sm:text-3xl md:text-4xl"
+                style="color: #f4eeee"
+              >
+                Ongoing Projects
+              </p>
+              <h3
+                id="ongoing-counter"
+                class="montserrat text-4xl sm:text-5xl md:text-6xl font-medium mt-2"
+                style="color: #00ffff"
+                data-target="12"
+              >
+                0
+              </h3>
+            </div>
+            <div>
+              <p
+                class="montserrat text-medium text-2xl sm:text-3xl md:text-4xl"
+                style="color: #f4eeee"
+              >
+                Satisfied Customers
+              </p>
+              <h3
+                id="customers-counter"
+                class="montserrat text-4xl sm:text-5xl md:text-6xl font-medium mt-2"
+                style="color: #00ffff"
+                data-target="1200"
+              >
+                0
+              </h3>
+            </div>
+          </div>
+        </div>
+        <!-- Projects Section -->
+        <section
+          class="flex overflow-hidden flex-col items-center px-20 pt-20 pb-36 bg-zinc-900 max-md:px-5 max-md:pb-24"
+          id="projects"
+        >
+          <div class="flex flex-col w-full max-w-[1512px] max-md:max-w-full">
+            <h1
+              class="self-center text-6xl text-center text-rose-100 max-md:text-4xl"
+            >
+              Our Projects
+            </h1>
+            <div class="flex flex-wrap gap-7 mt-20 max-md:mt-10">
+              <!-- Column 1 -->
+              <div class="flex-1 my-auto">
+                <figure class="relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/fc26bd537d1e5b725a8aa1241dda8b9a303c01db?placeholderIfAbsent=true"
+                    alt="Project image 1"
+                    class="object-contain w-full max-w-[200px] aspect-[1.01] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button class="px-6 py-2 text-black font-light rounded-3xl">
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+                <figure class="mt-5 relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5eb33f9dfcc16f0c293ead538ce44b73f6204055?placeholderIfAbsent=true"
+                    alt="Project image 2"
+                    class="object-contain w-full max-w-[200px] aspect-[0.58] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button
+                      class="px-6 py-2 text-white font-light rounded-3xl"
+                      style="background-color: #ada6a6"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+              </div>
+
+              <!-- Column 2 -->
+              <div class="flex-1">
+                <figure class="relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/fa90d7715246225fb05fefa6e175834a5dc06dad?placeholderIfAbsent=true"
+                    alt="Project image 3"
+                    class="object-contain w-full max-w-[200px] aspect-[0.58] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button
+                      class="px-6 py-2 bg-cyan-400 text-black font-light rounded-3xl"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+                <figure class="mt-5 relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/d1ecb78404a1f1dee348b2ec3cafb7fd3903e8da?placeholderIfAbsent=true"
+                    alt="Project image 4"
+                    class="object-contain w-full max-w-[200px] aspect-[0.58] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button
+                      class="px-6 py-2 bg-cyan-400 text-black font-light rounded-3xl"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+                <figure class="mt-5 relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/caa41b85fee66c4543567aeee57d71b6bce62735?placeholderIfAbsent=true"
+                    alt="Project image 5"
+                    class="object-contain w-full max-w-[200px] aspect-[1.01] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button
+                      class="px-6 py-2 bg-cyan-400 text-black font-light rounded-3xl"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+              </div>
+
+              <!-- CTA Column -->
+              <div
+                class="flex flex-col flex-1 self-end mt-36 text-center max-md:mt-10"
+              >
+                <figure class="relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/05d68ae2d8c04873c20b206d0175e64672bcd9fa?placeholderIfAbsent=true"
+                    alt="Featured project 1"
+                    class="object-contain w-full max-w-[200px] aspect-[1.01] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button
+                      class="px-6 py-2 bg-cyan-400 text-black font-light rounded-3xl"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+                <figure class="mt-5 relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc4a5e2422a595ac1fd89adf37c1a58f2bfd34b0?placeholderIfAbsent=true"
+                    alt="Featured project 2"
+                    class="object-contain w-full max-w-[200px] aspect-[0.58] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button
+                      class="px-6 py-2 bg-cyan-400 text-black font-light rounded-3xl"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+                <h2
+                  class="self-center mt-7 text-6xl font-light max-md:text-4xl"
+                  style="color: #f5e6e6"
+                >
+                  Explore
+                  <br />
+                  Our
+                  <br />
+                  Projects
+                </h2>
+                <button
+                  class="montserrat self-center px-11 py-3 mt-8 max-w-full text-2xl font-bold rounded-3xl w-[222px] max-md:px-5"
+                  style="background-color: #00ffff; color: #151414"
+                  aria-label="View more projects"
+                >
+                  View More
+                </button>
+              </div>
+
+              <!-- Column 4 -->
+              <div class="flex-1">
+                <figure class="relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/275a6c0d122385db394617abcc84497e04ca3657?placeholderIfAbsent=true"
+                    alt="Project image 6"
+                    class="object-contain w-full max-w-[200px] aspect-[0.58] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button
+                      class="px-6 py-2 bg-cyan-400 text-black font-light rounded-3xl"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+                <figure class="mt-5 relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/b6e31d7aada3fe1c5caebb7d8ea54b25654fa036?placeholderIfAbsent=true"
+                    alt="Project image 7"
+                    class="object-contain w-full max-w-[200px] aspect-[1.01] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button
+                      class="px-6 py-2 bg-cyan-400 text-black font-light rounded-3xl"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+                <figure class="mt-5 relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad2bee918c194053f80f68c888bf6270eb932897?placeholderIfAbsent=true"
+                    alt="Project image 8"
+                    class="object-contain w-full max-w-[200px] aspect-[0.58] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button
+                      class="px-6 py-2 bg-cyan-400 text-black font-light rounded-3xl"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+              </div>
+
+              <!-- Column 5 -->
+              <div class="flex-1 my-auto">
+                <figure class="relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/e6d0d278d134f4167fcc4e5589e8a13d539e261d?placeholderIfAbsent=true"
+                    alt="Project image 9"
+                    class="object-contain w-full max-w-[200px] aspect-[0.58] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button
+                      class="px-6 py-2 bg-cyan-400 text-black font-light rounded-3xl"
+                    >
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+                <figure class="mt-5 relative project-container">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/094ee96692bf8316277055c1895930c7a0e920f1?placeholderIfAbsent=true"
+                    alt="Project image 10"
+                    class="object-contain w-full max-w-[200px] aspect-[1.01] rounded-[36px] mx-auto"
+                  />
+                  <div
+                    class="project-overlay flex flex-col items-center justify-center"
+                  >
+                    <h3 class="text-white text-2xl font-bold mb-2">
+                      Project Name
+                    </h3>
+                    <p class="text-white text-2xl mb-1">Project Type</p>
+                    <p class="text-white text-2xl mb-4">Location</p>
+                    <button class="px-6 py-2 text-black font-light rounded-3xl">
+                      View Details
+                    </button>
+                  </div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- About Us Section -->
+      <div id="about" class="py-20 px-4" style="background-color: #1a1a1a">
+        <div class="max-w-6xl mx-auto">
+          <h1
+            class="inter text-3xl md:text-7xl font-regular mb-24 text-center"
+            style="color: #00ffff"
+          >
+            ABOUT FOUNDER
+          </h1>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Side: Text -->
+            <div>
+              <p class="inter text-white text-2xl mb-6 leading-relaxed">
+                The founder of the architectural company stood in the middle of
+                their newly opened office, a mix of excitement and nerves
+                swirling within. They had poured countless hours into crafting a
+                vision that combined innovative design with sustainable
+                practices. Every sketch and blueprint represented not just
+                buildings, but dreams and communities brought to life.As the
+                team gathered for their first brainstorming session, the founder
+                felt a surge of inspiration, knowing that this was the beginning
+                of something transformative. Together, they would not only
+                reshape skylines but also redefine what it meant to build
+                responsibly, blending artistry with functionality in every
+                project they undertook.
+              </p>
+            </div>
+
+            <!-- Right Side: Image -->
+            <div class="relative">
+              <img
+                src="images/image (2).png"
+                alt="Our Founder"
+                class="w-100 h-full object-cover shadow-xl ml-12"
+                style="max-height: 450px; border-radius: 50px"
+              />
+            </div>
+          </div>
+        </div>
+        <h1
+          class="inter text-3xl md:text-6xl font-light mt-24 text-center"
+          style="color: #00ffff"
+        >
+          OUR VALUES
+        </h1>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-28 mt-24 max-w-6xl mx-auto text-center px-4"
+        >
+          <div>
+            <h3
+              class="inter text-5xl font-bold mb-10 text-white values-heading cursor-pointer"
+            >
+              Design Quality
+            </h3>
+          </div>
+          <div>
+            <h3
+              class="inter text-5xl font-bold mb-10 text-white values-heading cursor-pointer"
+            >
+              Sustainability Practices
+            </h3>
+          </div>
+          <div>
+            <h3
+              class="inter text-5xl font-bold mb-10 text-white values-heading cursor-pointer"
+            >
+              Client Relationships
+            </h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Carousel Section -->
+      <div class="py-20 px-4" style="background-color: #1a1a1a">
+        <div class="max-w-6xl mx-auto">
+          <h1
+            class="montserrat text-center text-6xl font-bold mb-24"
+            style="color: #f5e6e6"
+          >
+            What Our Clients Say
+          </h1>
+
+          <div class="relative overflow-hidden">
+            <!-- Add Left Arrow -->
+            <button
+              class="absolute left-2 md:left-6 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none"
+              id="prev-review"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Add Right Arrow -->
+            <button
+              class="absolute right-2 md:right-6 top-1/2 transform -translate-y-1/2 z-10 p-2 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none"
+              id="next-review"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+
+            <!-- Reviews Container -->
+            <div
+              class="reviews-container flex transition-transform duration-500 ease-in-out"
+            >
+              <!-- Review 1 -->
+              <div class="review-slide w-full flex-shrink-0 px-8">
+                <div
+                  class="rounded-xl p-8 mx-auto max-w-3xl"
+                  style="background-color: #d9d9d9"
+                >
+                  <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img
+                        src="https://randomuser.me/api/portraits/men/1.jpg"
+                        alt="Client"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3
+                        class="montserrat text-xl font-semibold"
+                        style="color: #111111"
+                      >
+                        John Smith
+                      </h3>
+                      <p class="montserrat text-gray-600">Residential Client</p>
+                    </div>
+                    <div class="ml-auto">
+                      <div class="flex text-yellow-400">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="montserrat text-lg leading-relaxed"
+                    style="color: #111111"
+                  >
+                    "Innovative Design, Easy to Navigate!""The architectural
+                    projects are presented with elegance and clarity. The layout
+                    is simple yet effective, guiding visitors through the firm's
+                    achievements. The website is not only visually appealing but
+                    also user-friendly."
+                  </p>
+                </div>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="review-slide w-full flex-shrink-0 px-8">
+                <div
+                  class="rounded-xl p-8 mx-auto max-w-3xl"
+                  style="background-color: #d9d9d9"
+                >
+                  <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img
+                        src="https://randomuser.me/api/portraits/women/2.jpg"
+                        alt="Client"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3
+                        class="montserrat text-xl font-semibold"
+                        style="color: #111111"
+                      >
+                        Michael Chen
+                      </h3>
+                      <p class="montserrat text-gray-600">
+                        Hospitality Project
+                      </p>
+                    </div>
+                    <div class="ml-auto">
+                      <div class="flex text-yellow-400">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="montserrat text-lg leading-relaxed"
+                    style="color: #111111"
+                  >
+                    "Innovative Design, Easy to Navigate!""The architectural
+                    projects are presented with elegance and clarity. The layout
+                    is simple yet effective, guiding visitors through the firm's
+                    achievements. The website is not only visually appealing but
+                    also user-friendly."
+                  </p>
+                </div>
+              </div>
+              <!-- Review 3 -->
+              <div class="review-slide w-full flex-shrink-0 px-8">
+                <div
+                  class="rounded-xl p-8 mx-auto max-w-3xl"
+                  style="background-color: #d9d9d9"
+                >
+                  <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img
+                        src="https://randomuser.me/api/portraits/women/2.jpg"
+                        alt="Client"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3
+                        class="montserrat text-xl font-semibold"
+                        style="color: #111111"
+                      >
+                        Michael Chen
+                      </h3>
+                      <p class="montserrat text-gray-600">
+                        Hospitality Project
+                      </p>
+                    </div>
+                    <div class="ml-auto">
+                      <div class="flex text-yellow-400">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="montserrat text-lg leading-relaxed"
+                    style="color: #111111"
+                  >
+                    "Innovative Design, Easy to Navigate!""The architectural
+                    projects are presented with elegance and clarity. The layout
+                    is simple yet effective, guiding visitors through the firm's
+                    achievements. The website is not only visually appealing but
+                    also user-friendly."
+                  </p>
+                </div>
+              </div>
+              <!-- Review 4 -->
+              <div class="review-slide w-full flex-shrink-0 px-8">
+                <div
+                  class="rounded-xl p-8 mx-auto max-w-3xl"
+                  style="background-color: #d9d9d9"
+                >
+                  <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img
+                        src="https://randomuser.me/api/portraits/men/3.jpg"
+                        alt="Client"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3
+                        class="montserrat text-xl font-semibold"
+                        style="color: #111111"
+                      >
+                        Michael Chen
+                      </h3>
+                      <p class="montserrat text-gray-600">
+                        Hospitality Project
+                      </p>
+                    </div>
+                    <div class="ml-auto">
+                      <div class="flex text-yellow-400">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="montserrat text-lg leading-relaxed"
+                    style="color: #111111"
+                  >
+                    "Innovative Design, Easy to Navigate!""The architectural
+                    projects are presented with elegance and clarity. The layout
+                    is simple yet effective, guiding visitors through the firm's
+                    achievements. The website is not only visually appealing but
+                    also user-friendly."
+                  </p>
+                </div>
+              </div>
+              <!-- Review 5 -->
+              <div class="review-slide w-full flex-shrink-0 px-8">
+                <div
+                  class="rounded-xl p-8 mx-auto max-w-3xl"
+                  style="background-color: #d9d9d9"
+                >
+                  <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img
+                        src="https://randomuser.me/api/portraits/men/3.jpg"
+                        alt="Client"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3
+                        class="montserrat text-xl font-semibold"
+                        style="color: #111111"
+                      >
+                        Michael Chen
+                      </h3>
+                      <p class="montserrat text-gray-600">
+                        Hospitality Project
+                      </p>
+                    </div>
+                    <div class="ml-auto">
+                      <div class="flex text-yellow-400">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="montserrat text-lg leading-relaxed"
+                    style="color: #111111"
+                  >
+                    "Innovative Design, Easy to Navigate!""The architectural
+                    projects are presented with elegance and clarity. The layout
+                    is simple yet effective, guiding visitors through the firm's
+                    achievements. The website is not only visually appealing but
+                    also user-friendly."
+                  </p>
+                </div>
+              </div>
+              <!-- Review 6 -->
+              <div class="review-slide w-full flex-shrink-0 px-8">
+                <div
+                  class="rounded-xl p-8 mx-auto max-w-3xl"
+                  style="background-color: #d9d9d9"
+                >
+                  <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                      <img
+                        src="https://randomuser.me/api/portraits/men/3.jpg"
+                        alt="Client"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h3
+                        class="montserrat text-xl font-semibold"
+                        style="color: #111111"
+                      >
+                        Michael Chen
+                      </h3>
+                      <p class="montserrat text-gray-600">
+                        Hospitality Project
+                      </p>
+                    </div>
+                    <div class="ml-auto">
+                      <div class="flex text-yellow-400">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <p
+                    class="montserrat text-lg leading-relaxed"
+                    style="color: #111111"
+                  >
+                    "Innovative Design, Easy to Navigate!""The architectural
+                    projects are presented with elegance and clarity. The layout
+                    is simple yet effective, guiding visitors through the firm's
+                    achievements. The website is not only visually appealing but
+                    also user-friendly."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="flex justify-center my-8">
+              <button
+                class="dot w-3 h-3 mx-1 rounded-full bg-gray-400 focus:outline-none dot-active"
+                data-index="0"
+              ></button>
+              <button
+                class="dot w-3 h-3 mx-1 rounded-full bg-gray-400 focus:outline-none"
+                data-index="1"
+              ></button>
+              <button
+                class="dot w-3 h-3 mx-1 rounded-full bg-gray-400 focus:outline-none"
+                data-index="2"
+              ></button>
+              <button
+                class="dot w-3 h-3 mx-1 rounded-full bg-gray-400 focus:outline-none"
+                data-index="3"
+              ></button>
+              <button
+                class="dot w-3 h-3 mx-1 rounded-full bg-gray-400 focus:outline-none"
+                data-index="4"
+              ></button>
+              <button
+                class="dot w-3 h-3 mx-1 rounded-full bg-gray-400 focus:outline-none"
+                data-index="5"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer Section -->
+      <footer
+        class="text-white pt-12 pb-4 px-8"
+        style="background-color: #1a1a1a"
+      >
+        <div
+          class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24"
+        >
+          <!-- Contact Us -->
+          <div id="contact">
+            <h3 class="text-xl font-bold mb-2" style="color: #00ffff">
+              CONTACT US
+            </h3>
+            <p class="mb-4 text-xl" style="color: #f4eeee">
+              You can get in touch with us quickly by filling in your details
+              below and we will contact you back as soon as possible.
+            </p>
+            <form
+              class="flex flex-col gap-3"
+              action="http://localhost:3001/send-email"
+              method="POST"
+              id="contactForm"
+            >
+              <label class="text-white">Name</label>
+              <input
+                type="text"
+                name="name"
+                class="bg-gray-400 bg-opacity-60 rounded-md px-3 py-2 text-black focus:outline-none"
+                required
+              />
+              <label class="text-white">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="bg-gray-400 bg-opacity-60 rounded-md px-3 py-2 text-black focus:outline-none"
+                required
+              />
+              <label class="text-white">Comments</label>
+              <textarea
+                name="comments"
+                class="bg-gray-400 bg-opacity-60 rounded-md px-3 py-2 text-black focus:outline-none"
+                required
+              ></textarea>
+              <button
+                type="submit"
+                class="font-bold text-black rounded-full px-8 py-2 mt-2 self-start"
+                style="background-color: #00ffff; opacity: 80%"
+                id="sendButton"
+              >
+                SEND
+              </button>
+              <span
+                id="successMessage"
+                class="text-green-500 font-semibold ml-4 hidden"
+                >Message sent successfully</span
+              >
+            </form>
+          </div>
+          <!-- Company -->
+          <div>
+            <h3 class="text-xl font-bold mb-2" style="color: #00ffff">
+              COMPANY
+            </h3>
+            <ul
+              class="mt-4 space-y-2 text-xl flex flex-col gap-3"
+              style="color: #f4eeee"
+            >
+              <li>
+                <a href="#about" class="hover:underline text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#projects" class="hover:underline text-white"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:underline text-white"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Follow Us -->
+          <div>
+            <h3 class="text-xl font-bold mb-2" style="color: #00ffff">
+              FOLLOW US
+            </h3>
+            <div class="flex space-x-4 mt-4 text-2xl">
+              <a
+                href="https://www.instagram.com/raidstudio.in/"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram" style="color: #e4405f"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook" style="color: #1877f3"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter" style="color: #1da1f2"></i
+              ></a>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="fab fa-linkedin" style="color: #0077b5"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="border-t border-cyan-400 my-8" />
+        <div class="text-gray-400 text-sm text-left">
+          &copy; 2025 All Rights Reserved
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
