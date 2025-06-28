@@ -46,25 +46,6 @@
   opacity: 1; /* Show the list */
 }
 
-/* Counter section styling */
-.counter-section {
-  transition: all 0.5s ease;
-}
-
-.counter-section h3 {
-  transition: color 0.3s ease;
-}
-
-/* Add responsive padding for smaller screens */
-@media (max-width: 640px) {
-  .counter-section {
-    padding: 0 10px;
-  }
-
-  .counter-section > div {
-    margin-bottom: 30px;
-  }
-}
 /* Text stroke utilities */
 .stroke-black {
   -webkit-text-stroke: 1.25px black;
@@ -85,19 +66,6 @@
 
 .stroke-thick {
   -webkit-text-stroke: 2px;
-}
-
-/* Counter section styling */
-.counter-section {
-  transition: all 0.5s ease;
-}
-
-.counter-section h3 {
-  transition: color 0.3s ease;
-}
-
-.counter-section:hover h3 {
-  text-shadow: 0 0 15px #00ffff, 0 0 30px rgba(0, 255, 255, 0.5);
 }
 
 /* Projects Grid Layout */
@@ -276,16 +244,6 @@
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-  }
-}
-
-@media (max-width: 640px) {
-  .counter-section {
-    padding: 0 10px;
-  }
-
-  .counter-section > div {
-    margin-bottom: 30px;
   }
 }
 

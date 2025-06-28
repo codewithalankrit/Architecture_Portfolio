@@ -22,45 +22,6 @@ for (let i = 0; i < text.length; i++) {
   circle.appendChild(span);
 }
 
-// Animated counters on scroll
-const counters = document.querySelectorAll(
-  "#projects-counter, #ongoing-counter, #customers-counter"
-);
-let counted = false;
-
-// Function to start counter animation
-function startCounters() {
-  if (counted) return;
-
-  counters.forEach((counter) => {
-    const target = +counter.getAttribute("data-target");
-    const duration = 2000; // milliseconds
-    const increment = target / (duration / 16); // 60fps
-
-    let current = 0;
-    const updateCounter = () => {
-      current += increment;
-
-      if (current < target) {
-        // For most counters, show as integer
-        counter.innerText = Math.floor(current);
-        requestAnimationFrame(updateCounter);
-      } else {
-        // When animation completes
-        if (counter.id === "customers-counter") {
-          counter.innerText = Math.floor(target) + "+"; // Add '+' for customers
-        } else {
-          counter.innerText = Math.floor(target);
-        }
-      }
-    };
-
-    updateCounter();
-  });
-
-  counted = true;
-}
-
 // Check if element is in viewport
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
