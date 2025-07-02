@@ -259,67 +259,6 @@
   }
 }
 
-/* Reviews carousel styling */
-.reviews-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.review-slide {
-  flex: 0 0 100%;
-  width: 100%;
-}
-
-/* Arrow button styles */
-#prev-review,
-#next-review {
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 40%;
-  transform: translateY(-50%);
-  z-index: 20;
-}
-
-#prev-review svg,
-#next-review svg {
-  width: 24px;
-  height: 24px;
-}
-
-#prev-review:hover,
-#next-review:hover {
-  opacity: 1;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.dot {
-  transition: background-color 0.3s ease;
-}
-
-.dot-active {
-  background-color: #00ffff !important;
-  transform: scale(1.2);
-}
-
-/* Optional: Add a subtle fade effect for reviews */
-@keyframes fadeIn {
-  from {
-    opacity: 0.7;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.reviews-container .review-slide {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
 /* Values section hover effects */
 .values-heading {
   transition: transform 0.3s ease;
